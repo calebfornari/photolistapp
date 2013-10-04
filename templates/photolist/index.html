@@ -1,0 +1,15 @@
+{% load url from future %}
+
+{% block title %} All Photos {% endblock %}
+
+{% block content %}
+
+<h1>All Photos</h1>
+<ul>
+{% for image in photos %}
+    <li>
+       <img src="/static/{{ image.image }}" width="600" height=""/> </li>
+{% endfor %}
+</ul>
+
+{% endblock %}
